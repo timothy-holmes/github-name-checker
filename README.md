@@ -6,7 +6,7 @@
 - You can also uncomment line 25 to make it run in the background hidden.
 - Has integrated ratelimit cooldown, 90s, tested to be the best time for the most efficient results.
 - Will write down tracked usernames into file and also print in console.
-# Setup
+## Setup
 ```
 - Download repo
 - Open command prompt
@@ -15,6 +15,6 @@
 - python main.py
 - Enjoy
 ```
-# Requirements
+## Requirements
 - needs a version of Chrome installed
 - Python
