@@ -15,3 +15,6 @@
 - python main.py
 - Enjoy
 ```
+# Requirements
+- needs a version of Chrome installed
+- Python
