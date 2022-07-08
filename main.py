@@ -19,7 +19,7 @@ def rstring(length):
    return ''.join(random.choice(letters) for x in range(length))
 
 def title(text):
-    ctypes.windll.kernel32.SetConsoleTitleW(f"Github Username Bruteforcer | {text}")
+    ctypes.windll.kernel32.SetConsoleTitleW(f"Github Username Checker | {text}")
 
 coptions=webdriver.ChromeOptions()
 # coptions.add_argument("--headless")
@@ -68,7 +68,7 @@ if __name__=="__main__":
     username=driver.find_element(By.XPATH, value="/html/body/div[4]/main/div[2]/text-suggester/div[1]/form/div[3]/div[2]/div/auto-check/input[1]") 
     username.click()
 
-    ctypes.windll.kernel32.SetConsoleTitleW(f"Github Username Bruteforcer | Starting to bruteforce")
+    ctypes.windll.kernel32.SetConsoleTitleW(f"Github Username Checker | Starting to bruteforce")
     for length in range(minium_length, maximum_length + 1):
         for combo in product(string.ascii_lowercase+string.digits, repeat=length):
             username.send_keys("".join(combo))
@@ -89,7 +89,7 @@ if __name__=="__main__":
                 last_cooldown=last_cooldown+1
 
                 for i in range(time_delay):
-                    ctypes.windll.kernel32.SetConsoleTitleW(f"Github Username Bruteforcer | Waiting: {time_delay}s | Last cooldown: {last_cooldown}")
+                    ctypes.windll.kernel32.SetConsoleTitleW(f"Github Username Checker | Waiting: {time_delay}s | Last cooldown: {last_cooldown}")
                     time.sleep(1)
                     time_delay=time_delay-1
 
@@ -102,6 +102,6 @@ if __name__=="__main__":
             username.send_keys(Keys.CONTROL+"a")
             username.send_keys(Keys.BACKSPACE)
 
-            ctypes.windll.kernel32.SetConsoleTitleW(f"Github Username Bruteforcer | Hits: {hit_accs} | Misses: {miss_accs} | Total: {hit_accs+miss_accs} | Last cooldown: {last_cooldown}")
+            ctypes.windll.kernel32.SetConsoleTitleW(f"Github Username Checker | Hits: {hit_accs} | Misses: {miss_accs} | Total: {hit_accs+miss_accs} | Last cooldown: {last_cooldown}")
 
     time.sleep(2)
